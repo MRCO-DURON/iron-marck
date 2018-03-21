@@ -1,6 +1,1 @@
-<<<<<<< HEAD
-hola2222
-=======
-hola
-333
->>>>>>> iron-marck-branch01
+CLEAN
