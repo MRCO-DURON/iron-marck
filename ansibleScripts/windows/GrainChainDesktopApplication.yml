@@ -1,0 +1,29 @@
+-
+  name: Deploy a web application
+  hosts: 127.0.0.1
+  tasks:
+    - name: Execute local msi of mysql installer
+      win_package:
+        path: C:\installer\servers\mysql-installer\mysql-installer-community-5.7.4.0.msi
+        state: present
+
+    - name: Execute CPlusPlusRedist installation
+      win_package:
+        path: C:\installer\CPlusPlusRedist\2013\en\vcredist_x64.exe 
+        state: present
+
+    - name: Execute local msi of mysql installer
+      win_package:
+        path: C:\installer\servers\mysql-conector-odbc\mysql-connector-odbc-5.3.11-winx64.msi
+        state: present
+
+    - name: Execute local msi of mysql installer
+      win_package:
+        path: C:\installer\servers\HeidiSQL\HeidiSQL_9.5.0.5196_Setup.exe
+        state: present
+
+    - name: Execute local msi of mysql installer
+      win_package:
+        path: C:\installer\servers\replicatorManager\ReplicatorManager.exe
+        state: present
+
