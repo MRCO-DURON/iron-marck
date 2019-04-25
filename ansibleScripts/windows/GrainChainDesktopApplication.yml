@@ -1,6 +1,6 @@
 -
   name: Deploy a web application
-  hosts: 127.0.0.1
+  hosts: windows
   tasks:
     - name: Execute local msi of mysql installer
       win_package:
