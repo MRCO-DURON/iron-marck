@@ -5,7 +5,6 @@
     - name: Execute local msi of mysql installer
       win_package:
         path: C:\installer\servers\mysql-installer\mysql-installer-community-5.7.4.0.msi
-        product_id: '{211FC95B-BEA0-4C97-97A2-3B328AC5AF16}'
         state: present
 
     - name: Execute CPlusPlusRedist installation
