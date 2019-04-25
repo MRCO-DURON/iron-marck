@@ -2,29 +2,35 @@
   name: Deploy a web application
   hosts: windows
   tasks:
+    - name: Visual c++ installation
+      win_package:
+        path: C:\installer\servers\vc_redist.x64.exe
+        product_id: '{323dad84-0974-4d90-a1c1-e006c7fdbb7d}'
+        arguments: /install /passive /norestart
+
     - name: Execute local msi of mysql installer
       win_package:
         path: C:\installer\servers\mysql-installer\mysql-installer-community-5.7.4.0.msi
         product_id: '{20F9027F-F372-4AC6-A9D2-6EDC4CBA4BF1}'
         state: present
 
-    - name: Execute CPlusPlusRedist installation
-      win_package:
-        path: C:\installer\CPlusPlusRedist\2013\en\vcredist_x64.exe 
-        state: present
+        #   - name: Execute CPlusPlusRedist installation
+        #win_package:
+        #path: C:\installer\CPlusPlusRedist\2013\en\vcredist_x64.exe 
+        #state: present
 
-    - name: Execute local msi of mysql installer
-      win_package:
-        path: C:\installer\servers\mysql-conector-odbc\mysql-connector-odbc-5.3.11-winx64.msi
-        state: present
+        #- name: Execute local msi of mysql installer
+        #win_package:
+        #path: C:\installer\servers\mysql-conector-odbc\mysql-connector-odbc-5.3.11-winx64.msi
+        #state: present
 
-    - name: Execute local msi of mysql installer
-      win_package:
-        path: C:\installer\servers\HeidiSQL\HeidiSQL_9.5.0.5196_Setup.exe
-        state: present
+        #- name: Execute local msi of mysql installer
+        #win_package:
+        #path: C:\installer\servers\HeidiSQL\HeidiSQL_9.5.0.5196_Setup.exe
+        #state: present
 
-    - name: Execute local msi of mysql installer
-      win_package:
-        path: C:\installer\servers\replicatorManager\ReplicatorManager.exe
-        state: present
+        #- name: Execute local msi of mysql installer
+        #win_package:
+        #path: C:\installer\servers\replicatorManager\ReplicatorManager.exe
+        #state: present
 
