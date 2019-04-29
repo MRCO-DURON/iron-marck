@@ -11,7 +11,13 @@
     - name: Run an executable and send data to the stdin for the executable
       win_shell: msiexec -i C:\installer\servers\mysql-installer\mysql-8.0.13-winx64.msi -quiet 
 
-        #   - name: Execute CPlusPlusRedist installation
+    - name: Run mysql connector
+      win_shell: msiexec -i C:\installer\servers\mysql-connector-odbc\mysql-connector-odbc-5.3.11-winx64.msi -quiet
+
+    - name: Heidi SQL installation
+      win_shell: C:\installer\servers\HeidiSQL\HeidiSQL_9.5.0.5196_Setup.exe /SP /SILENT
+  
+      #   - name: Execute CPlusPlusRedist installation
         #win_package:
         #path: C:\installer\CPlusPlusRedist\2013\en\vcredist_x64.exe 
         #state: present

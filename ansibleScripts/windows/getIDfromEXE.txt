@@ -1,0 +1,1 @@
+https://blogs.msdn.microsoft.com/brian_farnhill/2017/07/04/getting-ids-to-use-with-the-package-dsc-resource/
