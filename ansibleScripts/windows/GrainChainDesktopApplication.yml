@@ -1,7 +1,16 @@
 -
   name: Deploy a web application
   hosts: windows
+  vars: 
+    OsArchitectur: powershell.exe (Get-WmiObject Win32_Processor).AddressWidth
   tasks:
+
+      
+      
+      
+      
+      
+      
     - name: Visual c++ installation
       win_package:
         path: C:\installer\servers\vc_redist.x64.exe
@@ -16,7 +25,25 @@
 
     - name: Heidi SQL installation
       win_shell: C:\installer\servers\HeidiSQL\HeidiSQL_9.5.0.5196_Setup.exe /SP /SILENT
-  
+    
+    - name: Execute powershell command
+      win_shell: echo {{ OsArchitectur }}
+      register: command_output
+      tags:
+         - evaluate1
+
+    - debug: var=command_output.stdout
+      tags: 
+         - evaluate2
+
+    - name: Evaluate output and print if this works properly
+      win_shell: echo si-charcha
+      when: command_output.stdout.find("*64*") == -1
+      tags:
+         - evaluate3
+      
+           #tags:
+           #- evaluate2
       #   - name: Execute CPlusPlusRedist installation
         #win_package:
         #path: C:\installer\CPlusPlusRedist\2013\en\vcredist_x64.exe 
