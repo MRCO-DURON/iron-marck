@@ -17,7 +17,7 @@
         product_id: '{323dad84-0974-4d90-a1c1-e006c7fdbb7d}'
         arguments: /install /passive /norestart
 
-    - name: Run an executable and send data to the stdin for the executable
+    - name: MySQl Installation
       win_shell: msiexec -i C:\installer\servers\mysql-installer\mysql-8.0.13-winx64.msi -quiet 
 
     - name: Run mysql connector
