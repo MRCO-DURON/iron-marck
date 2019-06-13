@@ -1,0 +1,28 @@
+createdAt: "2019-04-29T17:42:59.635Z"
+updatedAt: "2019-05-28T22:57:03.180Z"
+type: "SNIPPET_NOTE"
+folder: "1c55254379fdf961ec10"
+title: "This is a whole new note which i am trying for the very first time"
+tags: [
+  "best_ever"
+]
+description: "This is a whole new note which i am trying for the very first time"
+snippets: [
+  {
+    linesHighlighted: []
+    name: ""
+    content: "[](https://garciagrain-api.silosys.ag) no esta tomando los cambios correspondientes que se hacen en bitbucket"
+  }
+  {
+    linesHighlighted: []
+    name: "firstNote"
+    content: "Another note"
+  }
+  {
+    name: ""
+    content: ""
+    linesHighlighted: []
+  }
+]
+isStarred: false
+isTrashed: false
