@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/root/vagrant_files","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/marco/Documents/iron-marck/iron-marck/vagrant_files","disabled":false,"__vagrantfile":true}}}
