@@ -1,0 +1,19 @@
+Reboot EC2 filtered instances:
+
+
+>>> def get_running_instances():
+...     ec2_client = boto3.client("ec2", region_name="us-east-1")
+...     reservations = ec2_client.describe_instances(Filters=[
+...             {
+...                     "Name": "tag:Name",
+...                     "Values": ["abcnd-lightyear-qa-env-docker1"],
+...             }
+...     ]).get("Reservations")
+...     for reservation in reservations:
+...             for instance in reservation["Instances"]:
+...                     instance_id = instance["InstanceId"]
+...                     print("Rebooted:" + instance_id)
+... 
+>>> get_running_instances()
+Rebooted:i-0fd6854f6d7f464a9
+Rebooted:i-0774acd643970a84e
